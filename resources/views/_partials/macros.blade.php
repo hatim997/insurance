@@ -15,4 +15,4 @@ $color = $color ?? '#9055FD';
     <path fill-rule="evenodd" clip-rule="evenodd" d="M237.721 1.18923L125 70.3075V136.87L250 65.2465V8.06814C250 3.61223 246.389 0 241.935 0C240.448 0 238.99 0.411583 237.721 1.18923Z" fill="white" fill-opacity="0.3" />
   </svg>
 </span> --}}
-<img src="{{ asset('assets/img/logo.png') }}" alt class="" style="width: 32%">
+<img src="{{ asset('assets/img/logo.png') }}" alt class="" style="width: 80px">

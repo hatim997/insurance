@@ -29,6 +29,7 @@ $container = ($container ?? 'container-xxl');
        <!-- BEGIN: Navbar-->
        <?php if($isNavbar): ?>
       <?php echo $__env->make('layouts/sections/navbar/navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+
       <?php endif; ?> 
 
 
@@ -53,9 +54,7 @@ $container = ($container ?? 'container-xxl');
           <!-- / Content -->
 
           <!-- Footer -->
-          <?php if($isFooter): ?>
-          <?php echo $__env->make('layouts/sections/footer/footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-          <?php endif; ?>
+          
           <!-- / Footer -->
           <div class="content-backdrop fade"></div>
         </div>

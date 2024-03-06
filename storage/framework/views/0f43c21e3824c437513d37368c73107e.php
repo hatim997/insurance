@@ -28,6 +28,7 @@ $navbarDetached = ($navbarDetached ?? '');
       </div>
       <?php endif; ?>
 
+
       <!-- ! Not required for layout-without-menu -->
       <?php if(!isset($navbarHideToggle)): ?>
       <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0<?php echo e(isset($menuHorizontal) ? ' d-xl-none ' : ''); ?> <?php echo e(isset($contentNavbar) ?' d-xl-none ' : ''); ?>">
@@ -37,22 +38,192 @@ $navbarDetached = ($navbarDetached ?? '');
       </div>
       <?php endif; ?>
 
-      <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-        <!-- Search -->
-        <div class="navbar-nav align-items-center">
-          <div class="nav-item d-flex align-items-center">
-            <i class="mdi mdi-magnify mdi-24px lh-0"></i>
-            <input type="text" class="form-control border-0 shadow-none bg-body" placeholder="Search..." aria-label="Search...">
-          </div>
+      <div class="navbar-nav-right d-flex align-items-center  justify-content-between" id="navbar-collapse">
+        <div class="app-brand-logo  ">
+          <?php echo $__env->make('_partials.macros',["height"=>20], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         </div>
-        <!-- /Search -->
-        <ul class="navbar-nav flex-row align-items-center ms-auto">
+        <ul class="navbar-nav flex-row align-items-center  ">
 
           <!-- Place this tag where you want the button to render. -->
-          <li class="nav-item lh-1 me-3">
-            <a class="github-button" href="https://github.com/themeselection/materio-bootstrap-html-laravel-admin-template-free" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star themeselection/materio-bootstrap-html-laravel-admin-template-free on GitHub">Star</a>
+          <li class="nav-item  mx-3">
+              Client
           </li>
-
+          <li class="nav-item  mx-3">
+             Pending Approvals
+          </li>
+          <li class="nav-item  mx-3">
+            openRequests
+          </li>
+          <li class="nav-item  mx-5  pe-5">
+            Insured
+          </li>  
+        </ul>    
+          <ul class="navbar-nav flex-row align-items-center">
+          <li class="nav-item dropdown-notifications navbar-dropdown dropdown ms-5 me-xl-4 ps-5">
+            <a class="nav-link btn btn-text-secondary rounded-pill btn-icon dropdown-toggle hide-arrow waves-effect waves-light" href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+              <i class="mdi mdi-bell-outline mdi-24px"></i>
+              <span class="position-absolute top-0 start-50 translate-middle-y badge badge-dot bg-danger mt-2 border"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end py-0">
+              <li class="dropdown-menu-header border-bottom">
+                <div class="dropdown-header d-flex align-items-center py-3">
+                  <h6 class="fw-normal mb-0 me-auto">Notification</h6>
+                  <span class="badge rounded-pill bg-label-primary">8 New</span>
+                </div>
+              </li>
+              <li class="dropdown-notifications-list scrollable-container ps">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item list-group-item-action dropdown-notifications-item waves-effect">
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="flex-shrink-0">
+                        <div class="avatar me-1">
+                          <img src="https://demos.themeselection.com/materio-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/1.png" alt="" class="w-px-40 h-auto rounded-circle">
+                        </div>
+                      </div>
+                      <div class="d-flex flex-column flex-grow-1 overflow-hidden w-px-250">
+                        <h6 class="mb-1 text-truncate">Congratulation Lettie 🎉</h6>
+                        <small class="text-truncate text-body">Won the monthly best seller gold badge</small>
+                      </div>
+                      <div class="flex-shrink-0 dropdown-notifications-actions">
+                        <small class="text-muted">1h ago</small>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item list-group-item-action dropdown-notifications-item waves-effect">
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="flex-shrink-0">
+                        <div class="avatar me-1">
+                          <span class="avatar-initial rounded-circle bg-label-danger">CF</span>
+                        </div>
+                      </div>
+                      <div class="d-flex flex-column flex-grow-1 overflow-hidden w-px-250">
+                        <h6 class="mb-1 text-truncate">Charles Franklin</h6>
+                        <small class="text-truncate text-body">Accepted your connection</small>
+                      </div>
+                      <div class="flex-shrink-0 dropdown-notifications-actions">
+                        <small class="text-muted">12hr ago</small>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read waves-effect">
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="flex-shrink-0">
+                        <div class="avatar me-1">
+                          <img src="https://demos.themeselection.com/materio-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/2.png" alt="" class="w-px-40 h-auto rounded-circle">
+                        </div>
+                      </div>
+                      <div class="d-flex flex-column flex-grow-1 overflow-hidden w-px-250">
+                        <h6 class="mb-1 text-truncate">New Message ✉️</h6>
+                        <small class="text-truncate text-body">You have new message from Natalie</small>
+                      </div>
+                      <div class="flex-shrink-0 dropdown-notifications-actions">
+                        <small class="text-muted">1h ago</small>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item list-group-item-action dropdown-notifications-item waves-effect">
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="flex-shrink-0">
+                        <div class="avatar me-1">
+                          <span class="avatar-initial rounded-circle bg-label-success"><i class="mdi mdi-cart-outline"></i></span>
+                        </div>
+                      </div>
+                      <div class="d-flex flex-column flex-grow-1 overflow-hidden w-px-250">
+                        <h6 class="mb-1 text-truncate">Whoo! You have new order 🛒 </h6>
+                        <small class="text-truncate text-body">ACME Inc. made new order $1,154</small>
+                      </div>
+                      <div class="flex-shrink-0 dropdown-notifications-actions">
+                        <small class="text-muted">1 day ago</small>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read waves-effect">
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="flex-shrink-0">
+                        <div class="avatar me-1">
+                          <img src="https://demos.themeselection.com/materio-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/9.png" alt="" class="w-px-40 h-auto rounded-circle">
+                        </div>
+                      </div>
+                      <div class="d-flex flex-column flex-grow-1 overflow-hidden w-px-250">
+                        <h6 class="mb-1 text-truncate">Application has been approved 🚀 </h6>
+                        <small class="text-truncate text-body">Your ABC project application has been approved.</small>
+                      </div>
+                      <div class="flex-shrink-0 dropdown-notifications-actions">
+                        <small class="text-muted">2 days ago</small>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read waves-effect">
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="flex-shrink-0">
+                        <div class="avatar me-1">
+                          <span class="avatar-initial rounded-circle bg-label-success"><i class="mdi mdi-chart-pie-outline"></i></span>
+                        </div>
+                      </div>
+                      <div class="d-flex flex-column flex-grow-1 overflow-hidden w-px-250">
+                        <h6 class="mb-1 text-truncate">Monthly report is generated</h6>
+                        <small class="text-truncate text-body">July monthly financial report is generated </small>
+                      </div>
+                      <div class="flex-shrink-0 dropdown-notifications-actions">
+                        <small class="text-muted">3 days ago</small>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read waves-effect">
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="flex-shrink-0">
+                        <div class="avatar me-1">
+                          <img src="https://demos.themeselection.com/materio-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/5.png" alt="" class="w-px-40 h-auto rounded-circle">
+                        </div>
+                      </div>
+                      <div class="d-flex flex-column flex-grow-1 overflow-hidden w-px-250">
+                        <h6 class="mb-1 text-truncate">Send connection request</h6>
+                        <small class="text-truncate text-body">Peter sent you connection request</small>
+                      </div>
+                      <div class="flex-shrink-0 dropdown-notifications-actions">
+                        <small class="text-muted">4 days ago</small>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item list-group-item-action dropdown-notifications-item waves-effect">
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="flex-shrink-0">
+                        <div class="avatar me-1">
+                          <img src="https://demos.themeselection.com/materio-bootstrap-html-laravel-admin-template/demo/assets/img/avatars/6.png" alt="" class="w-px-40 h-auto rounded-circle">
+                        </div>
+                      </div>
+                      <div class="d-flex flex-column flex-grow-1 overflow-hidden w-px-250">
+                        <h6 class="mb-1 text-truncate">New message from Jane</h6>
+                        <small class="text-truncate text-body">Your have new message from Jane</small>
+                      </div>
+                      <div class="flex-shrink-0 dropdown-notifications-actions">
+                        <small class="text-muted">5 days ago</small>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read waves-effect">
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="flex-shrink-0">
+                        <div class="avatar me-1">
+                          <span class="avatar-initial rounded-circle bg-label-warning"><i class="mdi mdi-alert-circle-outline"></i></span>
+                        </div>
+                      </div>
+                      <div class="d-flex flex-column flex-grow-1 overflow-hidden w-px-250">
+                        <h6 class="mb-1">CPU is running high</h6>
+                        <small class="text-truncate text-body">CPU Utilization Percent is currently at 88.63%,</small>
+                      </div>
+                      <div class="flex-shrink-0 dropdown-notifications-actions">
+                        <small class="text-muted">5 days ago</small>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></li>
+              <li class="dropdown-menu-footer border-top p-3">
+                <a href="javascript:void(0);" class="btn btn-primary d-flex justify-content-center waves-effect waves-light">Read all notifications</a>
+              </li>
+            </ul>
+          </li>
           <!-- User -->
           <li class="nav-item navbar-dropdown dropdown-user dropdown">
             <a class="nav-link dropdown-toggle hide-arrow p-0" href="javascript:void(0);" data-bs-toggle="dropdown">
@@ -106,15 +277,16 @@ $navbarDetached = ($navbarDetached ?? '');
               <li>
                 <div class="dropdown-divider my-1"></div>
               </li>
-              <li>
-                <a class="dropdown-item" href="/logout">
-                  <i class='mdi mdi-power me-1 mdi-20px'></i>
-                  <span class="align-middle">Log Out</span>
-                </a>
-              </li>
+             
             </ul>
           </li>
           <!--/ User -->
+          <li class="nav-item  mx-3">
+            <a class="dropdown-item" href="/logout">
+              <i class='mdi mdi-power me-1 mdi-20px'></i>
+              <span class="align-middle">Log Out</span>
+            </a>
+          </li>
         </ul>
       </div>
 
@@ -122,5 +294,43 @@ $navbarDetached = ($navbarDetached ?? '');
     </div>
     <?php endif; ?>
   </nav>
+<div class="container-fluid py-4">
+<!-- Search -->
+<ul class="navbar-nav flex-row align-items-center ms-auto">
+  <li>
+<div class="navbar-nav align-items-center">
+  <div class="nav-item d-flex align-items-center">
+    <i class="mdi mdi-magnify mdi-24px lh-0"></i>
+    <input type="text" id="searched" class="form-control border-0 shadow-none bg-body" placeholder="LookUp MC Insured " aria-label="Search...">
+  </div>
+</div>
+  </li>
+  <li>
+    <div class="navbar-nav align-items-center">
+      <div class="nav-item d-flex align-items-center">
+        <i class="mdi mdi-magnify mdi-24px lh-0"></i>
+        <input type="text" id="searched"  class="form-control border-0 shadow-none bg-body" placeholder="Certificate Search" aria-label="Search...">
+      </div>
+    </div>
+      </li>
+</ul>
+<!-- /Search -->
+</div>
+<div class="container-fluid bg-black ">
+  <!-- Search -->
+  <ul class="navbar-nav   flex-row align-items-center ms-1">
+    <li>
+    <a class="btn btn-light">Dasboard</a>
+    </li>
+    <li>
+      <a class="btn btn-light">Motor Carrier Insureds</a>
+    </li>
+    <li>
+      <a class="btn btn-light">Company Information</a>
+          </li>
+  </ul>
+  <!-- /Search -->
+  </div>
+
   <!-- / Navbar -->
 <?php /**PATH D:\laravel\resources\views/layouts/sections/navbar/navbar.blade.php ENDPATH**/ ?>

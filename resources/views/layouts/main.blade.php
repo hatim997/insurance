@@ -21,9 +21,9 @@ $container = ($container ?? 'container-xxl');
 <div class="layout-wrapper layout-content-navbar {{ $isMenu ? '' : 'layout-without-menu' }}">
   <div class="layout-container">
 
-    @if ($isMenu)
+    {{-- @if ($isMenu)
             @include('layouts/sections/menu/verticalMenu')
-           @endif
+           @endif --}}
 
     <!-- Layout page -->
     <div class="layout-page">
