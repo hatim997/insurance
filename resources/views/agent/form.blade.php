@@ -1,4 +1,7 @@
-@extends('layouts/contentNavbarLayout')
+@php
+$isMenu = false;
+$navbarHideToggle = false;
+@endphp@extends('layouts/contentNavbarLayout')
 @section('title', ' Vertical Layouts - Forms')
 @section('content')
 <h4 class="py-3 mb-4"><span class="text-muted fw-light">INSURANCE/</span>INTERMODAL INTERCHANGE CERTIFICATE OF INSURANCE</h4>

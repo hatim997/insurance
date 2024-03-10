@@ -20,6 +20,7 @@ class AgentController extends Controller
   }
   public function formlist()
   {
+    
     $insurance_data = Insurance_data::Join(
       'insurance_details',
       'insurance_datas.id',
