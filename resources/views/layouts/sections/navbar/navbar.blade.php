@@ -55,7 +55,7 @@ $navbarDetached = ($navbarDetached ?? '');
             openRequests
           </li>
           <li class="nav-item  mx-5  pe-5">
-            <a href="/form"> NEW ACCORD Form</a>
+            <a href="form"> NEW ACCORD Form</a>
           </li>  
         </ul>    
           <ul class="navbar-nav flex-row align-items-center">
@@ -320,7 +320,7 @@ $navbarDetached = ($navbarDetached ?? '');
   <!-- Search -->
   <ul class="navbar-nav   flex-row align-items-center ms-1">
     <li>
-    <a class="btn btn-light">Dasboard</a>
+    <a href="{{ route('dashs')}}" class="btn btn-light">Dasboard</a>
     </li>
     <li>
       <a class="btn btn-light">Motor Carrier Insureds</a>
