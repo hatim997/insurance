@@ -1,3 +1,7 @@
+<?php
+$isMenu = false;
+$navbarHideToggle = false;
+?>
 <?php $__env->startSection('title', ' Vertical Layouts - Forms'); ?>
 <?php $__env->startSection('content'); ?>
 <h4 class="py-3 mb-4"><span class="text-muted fw-light">INSURANCE/</span>INTERMODAL INTERCHANGE CERTIFICATE OF INSURANCE</h4>

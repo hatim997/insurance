@@ -8210,10 +8210,10 @@ label.btn {
   border-color: #ff4c51;
   color: #fff;
 }
-::placeholder {
-  color: black !important;
-  
-}
+/* ::placeholder {
+  color: black !important;  
+} */
+
 .btn-light {
   color: #fff !important;
   background-color: transparent;

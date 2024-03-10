@@ -55,7 +55,7 @@ $navbarDetached = ($navbarDetached ?? '');
             openRequests
           </li>
           <li class="nav-item  mx-5  pe-5">
-            Insured
+            <a href="/form"> NEW ACCORD Form</a>
           </li>  
         </ul>    
           <ul class="navbar-nav flex-row align-items-center">
