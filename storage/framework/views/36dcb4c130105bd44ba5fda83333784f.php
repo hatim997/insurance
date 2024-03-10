@@ -1,3 +1,7 @@
+<?php
+$isMenu = false;
+$navbarHideToggle = false;
+?>
 
 
 <?php $__env->startSection('title', 'Dashboard - Analytics'); ?>

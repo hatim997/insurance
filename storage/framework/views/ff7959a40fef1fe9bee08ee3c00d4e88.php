@@ -26,7 +26,7 @@ $navbarHideToggle = false;
   <div class="col-md-4 col-lg-4">
     <div class="card" style="background: rgb(42,132,254); background: linear-gradient(180deg, rgba(42,132,254,1) 0%, rgba(54,197,255,1) 100%);">
       <div class="card-body text-center">
-        <h4 class="mb-1 py-4 text-white">Policy Expiring ia Month !</h4>
+        <a href="<?php echo e(url('/formlist')); ?>"><h4 class="mb-1 py-4 text-white">Policy Expiring ia Month !</h4></a>
     
        
        
